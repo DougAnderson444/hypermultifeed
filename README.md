@@ -1,6 +1,8 @@
-# @frando/corestore-multifeed
+# hyperultifeed
 
-> Fork of [https://github.com/kappa-db/multifeed](multifeed)
+> Fork of @frando/corestore-multifeed
+
+> Which is a Fork of [https://github.com/kappa-db/multifeed](multifeed)
 
 Multifeed lets you group together a local set of hypercores with
 a remote set of hypercores under a single shared identifier or key.
