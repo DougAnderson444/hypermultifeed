@@ -386,7 +386,7 @@ test('can replicate with custom keypairs', function (t) {
   var m2 = multifeed(ram, { valueEncoding: 'json' })
 
   setup(m1, keypair1, 'foo', () => {
-    setup(m2, keypair2, 'bar', (r) => {
+    setup(m2, keypair2, 'bar', () => {
       var r = m1.replicate(true)
       r.pipe(m2.replicate(false)).pipe(r)
         .once('end', check)

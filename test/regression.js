@@ -12,14 +12,12 @@ test('regression: concurrency of writer creation', function (t) {
   t.plan(3)
 
   var storage = tmp()
-  var key
 
   var multi = multifeed(storage, { valueEncoding: 'json' })
 
   multi.writer('minuette', function (err, w) {
     t.error(err)
     t.ok(w.key)
-    key = w.key
   })
 
   multi.ready(function () {
@@ -169,7 +167,8 @@ test('regression: announce new feed on existing connections', function (t) {
     setup(m2, 'Second', function () {
       setup(m3, 'Third', function () {
         var feedsReplicated = 0
-        var r1 = null, r2 = null // forward declare replication streams.
+        var r1 = null
+        var r2 = null // forward declare replication streams.
 
         m1.on('feed', function (feed, name) {
           feed.get(0, function (err, entry) {
@@ -178,12 +177,14 @@ test('regression: announce new feed on existing connections', function (t) {
             switch (feedsReplicated) {
               case 1: // First we should see M2's writer
                 m2.writer('local', function (err, w) {
+                  if (err) console.error(err)
                   t.equal(feed.key.toString('hex'), w.key.toString('hex'), "should see m2's writer")
                   t.equals(entry, 'Second', "m2's writer should have been replicated")
                 })
                 break
               case 2:
                 m3.writer('local', function (err, w) {
+                  if (err) console.error(err)
                   t.equal(feed.key.toString('hex'), w.key.toString('hex'), "should see m3's writer")
                   t.equals(entry, 'Third', "m3's writer should have been forwarded via m2")
                   // close active streams and end the test.
@@ -229,7 +230,6 @@ test('regression: replicate before multifeed is ready', function (t) {
   t.plan(1)
 
   var storage = tmp()
-  var key
 
   var multi = multifeed(storage, { valueEncoding: 'json' })
   var res = multi.replicate(true)

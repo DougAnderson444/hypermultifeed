@@ -25,12 +25,12 @@ test('key exchange API', function (t) {
     mux1.on('replicate', function (keys, repl) {
       t.deepEqual(keys, ['A', 'C'], 'List of filtered keys to initialize')
       t.equal(typeof repl, 'function')
-      if (++countEv == 2) t.end()
+      if (++countEv === 2) t.end()
     })
     mux2.on('replicate', function (keys, repl) {
       t.deepEqual(keys, ['A', 'C'], 'List of filtered keys to initialize')
       t.equal(typeof repl, 'function')
-      if (++countEv == 2) t.end()
+      if (++countEv === 2) t.end()
     })
     mux1.offerFeeds(['A', 'B', 'C'])
   })

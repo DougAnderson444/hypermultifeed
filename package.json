@@ -14,7 +14,7 @@
   "main": "index.js",
   "scripts": {
     "test": "tape 'test/new-basic.js'",
-    "lint": "standard --fix"
+    "lint": "standard"
   },
   "keywords": [],
   "dependencies": {
