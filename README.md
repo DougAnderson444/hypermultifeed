@@ -1,6 +1,8 @@
 # hyperultifeed
 
-> Fork of @frando/corestore-multifeed
+> Fork of https://gitlab.com/coboxcoop/multifeed
+
+> Which is a Fork of @frando/corestore-multifeed
 
 > Which is a Fork of [https://github.com/kappa-db/multifeed](multifeed)
 
