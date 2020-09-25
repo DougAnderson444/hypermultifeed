@@ -11,7 +11,7 @@ const { assign } = Object
 const { MuxerTopic } = require('./networker')
 
 // Default key to bootstrap replication and namespace the corestore
-// It is not adviced to use this for real purposes. If no root key is
+// It is not advised to use this for real purposes. If no root key is
 // passed in, this key will be used for opening a protocol channel
 // and as the namespace to store the list of feeds that are part of this
 // multifeed (if using the default persist handlers).

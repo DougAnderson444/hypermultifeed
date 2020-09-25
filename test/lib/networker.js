@@ -1,7 +1,7 @@
 const Corestore = require('corestore')
 const ram = require('random-access-memory')
 const dht = require('@hyperswarm/dht')
-const Networker = require('corestore-networker')
+const Networker = require('@corestore/networker')
 const BOOTSTRAP_PORT = 3100
 var bootstrap = null
 
