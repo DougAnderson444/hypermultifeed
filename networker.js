@@ -1,4 +1,4 @@
-const crypto = require('hypercore-crypto')
+const hcrypto = require('hypercore-crypto')
 const Multiplexer = require('./mux')
 const debug = require('debug')('multifeed')
 const { EventEmitter } = require('events')
@@ -6,7 +6,7 @@ const { EventEmitter } = require('events')
 class MuxerTopic extends EventEmitter {
   constructor (corestore, rootKey, opts = {}) {
     super()
-    this._id = crypto.randomBytes(2).toString('hex')
+    this._id = hcrypto.randomBytes(2).toString('hex')
     this.corestore = corestore
     this.rootKey = rootKey
     this._feeds = new Map()
@@ -147,7 +147,7 @@ module.exports = class MultifeedNetworker {
     const hkey = rootKey.toString('hex')
     if (this.muxers.has(hkey)) return this.muxers.get(hkey)
     const mux = opts.mux || new MuxerTopic(this.corestore, rootKey, opts)
-    const discoveryKey = crypto.discoveryKey(rootKey)
+    const discoveryKey = hcrypto.discoveryKey(rootKey)
     // Join the swarm.
     this.networker.configure(discoveryKey, { announce: true, lookup: true })
     this.muxers.set(hkey, mux)
@@ -163,7 +163,7 @@ module.exports = class MultifeedNetworker {
     const hkey = rootKey.toString('hex')
     var mux = this.muxers.get(hkey)
     if (!mux) return false // throw??
-    const discoveryKey = crypto.discoveryKey(rootKey)
+    const discoveryKey = hcrypto.discoveryKey(rootKey)
     this.networker.configure(discoveryKey, { announce: false, lookup: false })
     this.muxers.delete(hkey)
     // remove and close any existing streams from this mux instance
