@@ -4,8 +4,8 @@
   "publishConfig": {
     "access": "public"
   },
-  "author": "Stephen Whitmore <sww@eight.net>, Franz Heinzmann <frando@unbiskant.org>",
-  "version": "0.0.1",
+  "author": "Stephen Whitmore <sww@eight.net>, Franz Heinzmann <frando@unbiskant.org>, Doug Anderson <DougAnderson444@gmail.com>",
+  "version": "1.0.1",
   "repository": {
     "url": "git://github.com/DougAnderson444/hypermultifeed"
   },
