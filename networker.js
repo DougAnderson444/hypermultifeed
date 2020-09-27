@@ -87,7 +87,10 @@ class MuxerTopic extends EventEmitter {
   }
 
   _getFeed (key, cb) {
-    var feed = this.corestore.get({ key })
+    var feed = this.corestore.get({ 
+      key,
+      ...this._opts 
+    })
     if (!feed) return cb(new Error('no feed matching that key'))
     cb(null, feed)
   }
