@@ -19,12 +19,11 @@
   "keywords": [],
   "dependencies": {
     "@corestore/networker": "^1.0.3",
-    "abstract-extension": "^3.1.0",
-    "corestore": "^5.5.0",
+    "abstract-extension": "^3.1.1",
+    "corestore": "^5.7.3",
     "corestore-networker": "git+https://github.com/andrewosh/corestore-networker#v1.0.1",
     "debug": "^4.1.0",
     "hypercore": "^9.5.4",
-    "hyperswarm": "^2.15.2",
     "hypercore-crypto": "^2.1.1",
     "hypercore-protocol": "^8.0.4",
     "inherits": "^2.0.3",
@@ -38,6 +37,7 @@
   },
   "devDependencies": {
     "@hyperswarm/dht": "^3.6.5",
+    "hyperswarm": "^2.15.2",
     "pump": "^3.0.0",
     "pumpify": "^1.5.1",
     "random-access-latency": "^1.0.0",
