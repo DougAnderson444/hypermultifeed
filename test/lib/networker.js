@@ -23,7 +23,7 @@ async function create (opts = {}) {
     ...opts,
     bootstrap: `localhost:${BOOTSTRAP_PORT}`
   })
-  // logEvents(networker, 'networker')
+  logEvents(networker, 'networker')
   return { store, networker }
 }
 

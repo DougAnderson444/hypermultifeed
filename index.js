@@ -6,7 +6,6 @@ const collect = require('stream-collector')
 const debug = require('debug')('multifeed')
 const raf = require('random-access-file')
 const through = require('through2')
-const { assign } = Object
 
 const { MuxerTopic } = require('./networker')
 
@@ -20,7 +19,7 @@ const DEFAULT_ROOT_KEY = Buffer.from('bee80ff3a4ee5e727dc44197cb9d25bf8f19d50b0f
 const MULTIFEED_NAMESPACE_PREFIX = '@multifeed:'
 const FEED_NAMESPACE_PREFIX = '@multifeed:feed:'
 const PERSIST_NAMESPACE = '@multifeed:persist'
-
+// hypermultifeed
 class Multifeed extends Nanoresource {
   constructor (storage, opts = {}) {
     super()
