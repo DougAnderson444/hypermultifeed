@@ -5,7 +5,7 @@
     "access": "public"
   },
   "author": "Stephen Whitmore <sww@eight.net>, Franz Heinzmann <frando@unbiskant.org>, Doug Anderson <DougAnderson444@gmail.com>",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "repository": {
     "url": "git://github.com/DougAnderson444/hypermultifeed"
   },
@@ -20,7 +20,7 @@
   "dependencies": {
     "@corestore/networker": "^1.0.3",
     "abstract-extension": "^3.1.1",
-    "corestore": "^5.7.3",
+    "corestore": "^5.8.1",
     "debug": "^4.1.0",
     "hypercore": "^9.5.4",
     "hypercore-crypto": "^2.1.1",
