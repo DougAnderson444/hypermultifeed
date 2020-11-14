@@ -1,4 +1,6 @@
 # hyperultifeed
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FDougAnderson444%2Fhypermultifeed.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FDougAnderson444%2Fhypermultifeed?ref=badge_shield)
+
 
 > Fork of https://gitlab.com/coboxcoop/multifeed
 
@@ -222,3 +224,6 @@ $ npm install @frando/corestore-multifeed
 ## License
 
 ISC
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FDougAnderson444%2Fhypermultifeed.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FDougAnderson444%2Fhypermultifeed?ref=badge_large)
